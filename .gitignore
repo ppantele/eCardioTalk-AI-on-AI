@@ -1,0 +1,40 @@
+secrets/api_keys.env
+.env
+__pycache__/
+preprint*
+*.pyc
+*.pyo
+.DS_Store
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.coverage
+
+# ---------------------------------------------------------------------------
+# Video pipeline
+# Track the methodology (scripts, config, small brand style templates); never
+# commit the heavy rendered videos, intermediate assets, or third-party engines.
+# ---------------------------------------------------------------------------
+video_clips/
+
+# Rendered / heavy binary outputs and inputs
+video_pipeline/final_clips/
+video_pipeline/audio/
+video_pipeline/bases/
+video_pipeline/lower_thirds/
+video_pipeline/**/*.mp4
+video_pipeline/**/*.wav
+video_pipeline/**/*.jpg
+video_pipeline/__pycache__/
+
+# Third-party engines & model weights (installed locally, not part of the repo)
+video_pipeline/latentsync/
+video_pipeline/hallo2/
+video_pipeline/wav2lip/
+video_pipeline/sadtalker/
+
+# external-templates: keep the brand style templates (small inputs), ignore
+# any heavy rendered/experiment assets dropped here.
+external-templates/recolor_demo/
+external-templates/*_still*.png

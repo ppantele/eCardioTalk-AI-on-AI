@@ -1,0 +1,24 @@
+# eCardio Vodcast — Video Pipeline Dependencies
+# Install in a dedicated conda env (see README_VIDEO.md):
+#
+#   conda create -n vodcast_video python=3.11 -y
+#   conda activate vodcast_video
+#   pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
+#   pip install -r video_pipeline/requirements_video.txt
+#
+# System dependency: ffmpeg must be on PATH (sudo apt-get install ffmpeg).
+# LatentSync has its own conda env (`latentsync`); see video_pipeline/latentsync/.
+
+# --- TTS (Kokoro) ---
+kokoro>=0.9.4
+misaki[en]>=0.9.4        # Kokoro's English G2P dependency
+soundfile>=0.12.1
+
+# --- Frame I/O & compositing ---
+opencv-python>=4.9.0
+mediapipe>=0.10.9        # selfie-segmentation matte for the idle-loop grid composite
+Pillow>=10.4.0           # lower-third rendering
+
+# --- Utilities ---
+numpy>=1.26.0
+tqdm>=4.66.0

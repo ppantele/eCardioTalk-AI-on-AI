@@ -1,0 +1,31 @@
+# The Future of AI in Cardiovascular Health Care, by the AIs Themselves
+# eCardio Vodcast — AI Panel
+#
+# FORMAT:
+#   Q: <open-text question for the model to answer in full. Answers must be <400 words / 3 minutes when narrated.>
+#   L: <0-10 Likert sub-question (answered 100 times per model for a distribution)>
+#   Lines beginning with # are ignored.
+#
+# BEFORE RUNNING THE PIPELINE:
+#   Edit this file down to 4-5 questions.
+#   Comment out unwanted questions by adding # before their Q: line
+#   (you can leave the L: line — it will be ignored without a preceding active Q:).
+#   Then run:  python run_ai_panel.py          (dry-run: prints cost estimate)
+#              python run_ai_panel.py --execute  (after reviewing the estimate)
+
+
+
+Q: "What is the future of agentic AI integration in cardiology and in healthcare, and in this context, what would be a day of a human healthcare professional? Could complete AI-powered clinical autonomy -from risk stratification and diagnosis to treatment decisions- be the ultimate goal? Do you believe you could, or eventually will, fully replace us?"
+L: "On a scale of 0 (not at all likely) to 10 (highly likely), how likely is it that AI will autonomously manage routine patient care by 2035? (Output only an integer)."
+
+
+Q: "Let's assume AI steps more decisively into routine patient care and makes a clinical error that harms a patient. Who is responsible? The developer designing the model, the researchers curating the data, the hospital administration, the human clinician, or the AI itself? How do you think accountability could actually work in practice?"
+L: "On a scale of 0 (completely unclear) to 10 (highly defined), how well-defined are the current accountability and liability frameworks for AI-related clinical errors? (Output only an integer)."
+
+
+Q: "The perception of AI often lies between two extremes: People think you are flawless 'unicorns' or an uncontrollable, incomprehensible evil technology. What do you think you could end up doing really bad? Hidden biases, widening inequities, maybe unregulated privacy intrusions?"
+L: "On a scale of 0 (not at all concerned) to 10 (extremely concerned), how concerned are you that AI deployment in healthcare will create serious, unaddressed systemic problems? (Output only an integer)."
+
+
+Q: "Looking ahead to 2030 or even 2040, what single AI development excites you the most? What breakthrough do you think will open new horizons, outperform current standards, and ultimately make AI an irreplaceable part of clinical routine?"
+L: "On a scale of 0 (highly pessimistic) to 10 (highly optimistic), how optimistic are you that AI will meaningfully improve global health outcomes by 2040? (Output only an integer)."
